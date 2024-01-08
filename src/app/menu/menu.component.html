@@ -1,0 +1,23 @@
+<header>
+ <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div><a *ngIf = "hardcodedAuthenticationService.isUserLoggdIn()" href="https://www.javatpoint.com/angular-8" class="nav-link">Javatpoint</a></div>
+
+    <div><a *ngIf = "hardcodedAuthenticationService.isUserLoggdIn()" href= "https://accionlabs.udemy.com/course/full-stack-application-development-with-spring-boot-and-angular/learn/lecture/12537718#overview" class="nav-link">LearnThisCourseAt</a></div>
+   
+    <ul class="navbar-nav">
+        <li><a *ngIf = "hardcodedAuthenticationService.isUserLoggdIn()" routerLink="/welcome/suma" class="nav-link">Home</a></li>
+        <li><a *ngIf = "hardcodedAuthenticationService.isUserLoggdIn()" routerLink="/todos" class="nav-link">Todo</a></li>
+    </ul>
+
+    <ul class="navbar-nav navbar-collapse justify-content-end">
+        <li><a *ngIf = "!hardcodedAuthenticationService.isUserLoggdIn()" routerLink="/login" class="nav-link">Login </a></li>
+        <li><a *ngIf = "hardcodedAuthenticationService.isUserLoggdIn()" routerLink="/logout" class="nav-link">Logout</a></li>
+    </ul>
+
+ </nav>
+</header>
+
+<!-- 
+href -- reloads entire page ex line 3
+
+routerLink -- single page application -->
